@@ -49,3 +49,35 @@ let isAuthenticated = true;
 let authenticationStatus = isAuthenticated? "Authenticated": "Not authenticated";
 
 console.log("Authentication status:", authenticationStatus);
+
+let isEmployee = true;
+let employeeAccess;
+let isEnrolledMember = false
+
+if(isEmployee){
+    employeeAccess = "Have access to dietary services"
+}else{
+    employeeAccess = "No aceess to dietary services"
+}
+
+console.log("Access : ",employeeAccess);
+
+let employeeType = "subscriber"
+let employeeCategory;
+
+switch(employeeType){
+    case "admin":
+        employeeCategory= "Full access to dietay services";
+        break;
+    case "subscriber":
+        employeeCategory= "Partial access to dietary services"
+        break;
+    default:
+        employeeCategory = "No Access to dietary services"
+}
+
+console.log(employeeCategory);
+
+let isAuth = employeeType !== "subscriber"? "You need to subscribe first to avail this facility" : "You have access to this facility";
+
+console.log(isAuth);
